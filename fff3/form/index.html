@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="form__title"><a href="#">Resume Builder</a></h1>
+    <div class="l-form">
+      <form class="form" method="post">
+        <div class="form__div">
+          <input
+            class="form__input"
+            type="text"
+            placeholder=" "
+            id="name"
+            required
+          />
+          <label class="form__label" for="">Name</label>
+        </div>
+        <div class="form__div">
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            placeholder=" "
+            name="email"
+            required
+          />
+          <label class="form__label" for="">Email</label>
+        </div>
+        <div class="form__div">
+          <input
+            type="text"
+            class="form__input"
+            id="phone"
+            placeholder=" "
+            name="phone"
+            required
+          />
+          <label class="form__label" for="">Phone</label>
+        </div>
+        <div class="form__div">
+          <textarea
+            id="address"
+            class="form__input"
+            name="address"
+            placeholder=" "
+            required
+          ></textarea>
+          <label class="form__label" for="address">Address</label>
+        </div>
+
+        <div class="form__div">
+          <textarea
+            class="form__input"
+            id="education"
+            name="education"
+            placeholder=" "
+            required
+          ></textarea>
+          <label for="education" class="form__label">Education</label>
+        </div>
+
+        <div class="form__div">
+          <textarea
+            id="experience"
+            name="experience"
+            placeholder=" "
+            required
+            class="form__input"
+          ></textarea>
+          <label for="" class="form__label">Experience</label>
+        </div>
+
+        <div class="form__div">
+          <textarea
+            id="skills"
+            name="skills"
+            placeholder=" "
+            required
+            class="form__input"
+          ></textarea>
+          <label for="skills" class="form__label">Skills</label>
+        </div>
+
+        <div class="form__div">
+          <select
+            id="template"
+            placeholder=" "
+            class="form__input"
+            name="template"
+            required
+          >
+            <?php for ($i = 1; $i <= 10; $i++): ?>
+            <option value="template<?php echo $i; ?>">
+              Template-1
+              <?php echo $i; ?>
+            </option>
+            <option value="template<?php echo $i; ?>">
+              Template-2
+              <?php echo $i; ?>
+            </option>
+            <option value="template<?php echo $i; ?>">
+              Template-3
+              <?php echo $i; ?>
+            </option>
+            <?php endfor; ?>
+          </select>
+          <label for="template" class="form__label">Choose a template</label>
+        </div>
+
+        <div class="button__div">
+          <button class="button-55" type="submit" name="preview">
+            Preview
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
